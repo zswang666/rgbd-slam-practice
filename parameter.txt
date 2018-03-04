@@ -1,0 +1,46 @@
+# keypoints
+detector=ORB
+descriptor=ORB
+good_match_threshold=10
+
+# camera
+camera.cx=325.5
+camera.cy=253.5
+camera.fx=518.0
+camera.fy=519.0
+camera.scale=1000.0
+
+# start and end index
+start_index=1
+end_index=780
+
+# data path
+rgb_dir=./data/rgb_png/
+rgb_extension=png
+depth_dir=./data/depth_png/
+depth_extension=png
+
+# point cloud resolution
+voxel_grid=0.01
+# whether visualize point cloud
+#visualize_pointcloud=yes
+
+# matcher BF/FLANN
+matcher=FLANN
+# minimum # of good matches, 10 for BF, 0.6 for FLANN
+min_good_match=0.6
+# minimum matches check before solving PnP
+min_matches=5
+# minimum # of inliers
+min_inliers=5
+# maximum motion norm change
+max_norm=0.2
+
+# pick keyframe
+keyframe_threshold=0.05
+max_norm_lp=2.0
+
+# loop closure
+check_loop_closure=yes
+nearby_loops=5
+random_loops=5
