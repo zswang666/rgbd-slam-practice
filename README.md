@@ -28,16 +28,17 @@ Run the code,
 ```
 $ cd ${RGBD-SLAM-PRACTICE-ROOT_DIR}
 $ ./bin/slam ./parameter.txt
+$ pcl_viewer ./results/result.pcd # other outputs are also in ./results/ directory
 ```
 
 ### Results
 Using [data](http://yun.baidu.com/s/1i33uvw5) provided by the [tutorial](http://www.cnblogs.com/gaoxiang12/tag/%E4%B8%80%E8%B5%B7%E5%81%9ARGB-D%20SLAM/), we can construct 3D model in point cloud like,
-![alt text](./index/pointcloud.png)
-
+<img src="./index/pointcloud.png" width="500">
 
 ### Notes
 - If you are using other detector or descriptor like SIFT or SURF, you need to compile OpenCV with [nonfree](https://docs.opencv.org/2.4/modules/nonfree/doc/nonfree.html) package.
-- For Ubuntu 16.04, ```g2o_viewer``` is broken (*** Error in g2o_viewer: realloc(): invalid pointer: 0x00007fe7d3d0c820 ***), at least on my computer. 
+- For Ubuntu 16.04, ```g2o_viewer``` is broken ```(*** Error in `g2o_viewer`: realloc(): invalid pointer: 0x00007fe7d3d0c820 ***)```, at least on my computer. 
+- There is a mysterious segmentation fault at the end of the slam program and it may be related to g2o package I guess.
 
 ### Reference
 - http://www.cnblogs.com/gaoxiang12/tag/%E4%B8%80%E8%B5%B7%E5%81%9ARGB-D%20SLAM/
